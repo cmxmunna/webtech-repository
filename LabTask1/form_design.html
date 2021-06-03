@@ -4,9 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Donation</title>
 </head>
 <body>
-    Welcome!
+    <font style="color:red;">*</font> - <font size="2">Denotes Required Information</font>  <br>
+    <b> &gt; 1 Donation </b> &nbsp;&nbsp; &gt; 2 Confirmation &nbsp;&nbsp; &gt; Thank You 
+    <font style="color: red;"><h3>Donor Information</h3></font>
+    <form>
+        <div style="text-align: laft; width: 85%; max-width: 850px; margin: auto; margin-top: -20px; margin-right: auto; margin-bottom: auto; margin-left: 60px; position: absolute; left: 0; right: 0; padding: 20px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; ">
+    <div style="text-align: right; max-width: 350px;">
+    <label for="fname">First Name</label><font style="color:red;">*</font> <input type="text" id="fname" name="fname" placeholder="Munna"> <br>
+    <label for="lname">Last Name</label><font style="color:red;">*</font> <input type="text" id="lname" name="lname" placeholder="Abdullah"> <br>
+    <label for="company">Company</label> <input type="text" id="company" name="company" placeholder="Star Tech Network Ltd."> <br>
+    <label for="address1">Address 1</label><font style="color:red;">*</font> <input type="text" id="address" name="address1" placeholder="Vill- ,P.O- ,Thana- ,Dist- "> <br>
+    <label for="address2">Address 2</label><font style="color:red;">*</font> <input type="text" id="address" name="address2" placeholder="Building, Apt, Floor etc."> <br>
+    <label for="city">City</label><font style="color:red;">*</font> <input type="text" id="city" name="city" placeholder="Dhaka"> <br>
+    <label for="state">State</label><font style="color:red;">*</font> <input list="states" id="state" name="state" placeholder="Select a State">
+    <datalist id="states">
+        <option value="AK">AK</option>
+        <option value="AL">AL</option>
+        <option value="AR">AR</option>
+        <option value="AZ">AZ</option>
+        <option value="BD">BD</option>
+        <option value="CA">CA</option>
+        <option value="CO">CO</option>
+        <option value="CT">CT</option>
+        <option value="DE">DE</option>
+        <option value="FL">FL</option>
+        <option value="GA">GA</option>
+        <option value="HI">HI</option>
+        <option value="KS">KS</option>
+        <option value="MD">MD</option>
+        <option value="ND">ND</option>
+        <option value="NH">NH</option>
+        <option value="OK">OK</option>
+        <option value="TN">TN</option>
+        <option value="VA">VA</option>
+        <option value="WY">WY</option>
+    </datalist> <br>
+    <label for="zip">Zip Code</label><font style="color:red;">*</font> <input type="number" id="zip" name="zip" placeholder="1234"> <br>
+    <label for="country">Country</label><font style="color:red;">*</font> <input list="countries" id="country" name="country" placeholder="Select a Country">
+    <datalist id="countries">
+        <option value="Afghanistan">Afghanistan</option>
+        <option value="Albania">Albania</option>
+        <option value="Angola">Angola</option>
+        <option value="Australia">Australia</option>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="Benin">Benin</option>
+        <option value="Bulgaria">Bulgaria</option>
+        <option value="Cambodia">Cambodia</option>
+        <option value="China">China</option>
+        <option value="Comoros">Comoros</option>
+        <option value="Cyprus">Cyprus</option>
+        <option value="Ecuador">Ecuador</option>
+        <option value="Estonia">Estonia</option>
+        <option value="Finland">Finland</option>
+        <option value="Greece">Greece</option>
+        <option value="India">India</option>
+        <option value="Italy">Italy</option>
+        <option value="Japan">Japan</option>
+        <option value="Liberia">Liberia</option>
+        <option value="Russia">Russia</option>
+    </datalist> <br>
+    <label for="phone">Phone</label> <input type="number" id="phone" name="phone" placeholder="01600000000"> <br>
+    <label for="fax">Fax</label> <input type="text" id="fax" name="fax" placeholder=""> <br>
+    <label for="email">Email</label><font style="color:red;">*</font> <input type="text" id="email" name="email" placeholder="cmxmunna@gmail.com"> </div> <br>
+    <label for="amount">Donation Amount</label><font style="color:red;">*</font> 
+    <input type="radio" id="amount" name="amount"> 
+    <label>None</label> <input type="radio" id="amount" name="0"> 
+    <label>$50</label> <input type="radio" id="amount" name="50"> 
+    <label>$75</label> <input type="radio" id="amount" name="75">
+    <label>$100</label> <input type="radio" id="amount" name="100">
+    <label>$250</label> <input type="radio" id="amount" name="250">
+    <label>Other</label> <br>
+      </div>
+
+
+    </form>
 </body>
 </html>
