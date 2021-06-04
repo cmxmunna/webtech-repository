@@ -13,13 +13,13 @@
     <form>
         <div style="text-align: laft; width: 85%; max-width: 850px; margin: auto; margin-top: -20px; margin-right: auto; margin-bottom: auto; margin-left: 60px; position: absolute; left: 0; right: 0; padding: 20px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; ">
     <div style="text-align: right; max-width: 350px;">
-    <label for="fname">First Name</label><font style="color:red;">*</font> <input type="text" id="fname" name="fname" placeholder="Munna"> <br>
-    <label for="lname">Last Name</label><font style="color:red;">*</font> <input type="text" id="lname" name="lname" placeholder="Abdullah"> <br>
-    <label for="company">Company</label> <input type="text" id="company" name="company" placeholder="Star Tech Network Ltd."> <br>
-    <label for="address1">Address 1</label><font style="color:red;">*</font> <input type="text" id="address" name="address1" placeholder="Vill- ,P.O- ,Thana- ,Dist- "> <br>
-    <label for="address2">Address 2</label><font style="color:red;">*</font> <input type="text" id="address" name="address2" placeholder="Building, Apt, Floor etc."> <br>
-    <label for="city">City</label><font style="color:red;">*</font> <input type="text" id="city" name="city" placeholder="Dhaka"> <br>
-    <label for="state">State</label><font style="color:red;">*</font> <input list="states" id="state" name="state" placeholder="Select a State">
+    <label for="fname"><b>First Name</b></label><font style="color:red;">*</font> <input type="text" id="fname" name="fname" placeholder="Munna"> <br>
+    <label for="lname"><b>Last Name</b></label><font style="color:red;">*</font> <input type="text" id="lname" name="lname" placeholder="Abdullah"> <br>
+    <label for="company"><b>Company</b></label> <input type="text" id="company" name="company" placeholder="Star Tech Network Ltd."> <br>
+    <label for="address1"><b>Address 1</b></label><font style="color:red;">*</font> <input type="text" id="address" name="address1" placeholder="Vill- ,P.O- ,Thana- ,Dist- "> <br>
+    <label for="address2"><b>Address 2</b></label><font style="color:red;">*</font> <input type="text" id="address" name="address2" placeholder="Building, Apt, Floor etc."> <br>
+    <label for="city"><b>City</b></label><font style="color:red;">*</font> <input type="text" id="city" name="city" placeholder="Dhaka"> <br>
+    <label for="state"><b>State</b></label><font style="color:red;">*</font> <input list="states" id="state" name="state" placeholder="Select a State">
     <datalist id="states">
         <option value="AK">AK</option>
         <option value="AL">AL</option>
@@ -42,8 +42,8 @@
         <option value="VA">VA</option>
         <option value="WY">WY</option>
     </datalist> <br>
-    <label for="zip">Zip Code</label><font style="color:red;">*</font> <input type="number" id="zip" name="zip" placeholder="1234"> <br>
-    <label for="country">Country</label><font style="color:red;">*</font> <input list="countries" id="country" name="country" placeholder="Select a Country">
+    <label for="zip"><b>Zip Code</b></label><font style="color:red;">*</font> <input type="number" id="zip" name="zip" placeholder="1234"> <br>
+    <label for="country"><b>Country</b></label><font style="color:red;">*</font> <input list="countries" id="country" name="country" placeholder="Select a Country">
     <datalist id="countries">
         <option value="Afghanistan">Afghanistan</option>
         <option value="Albania">Albania</option>
@@ -66,12 +66,12 @@
         <option value="Liberia">Liberia</option>
         <option value="Russia">Russia</option>
     </datalist> <br>
-    <label for="phone">Phone</label> <input type="number" id="phone" name="phone" placeholder="01600000000"> <br>
-    <label for="fax">Fax</label> <input type="text" id="fax" name="fax" placeholder=""> <br>
-    <label for="email">Email</label><font style="color:red;">*</font> <input type="text" id="email" name="email" placeholder="cmxmunna@gmail.com"> 
+    <label for="phone"><b>Phone</b></label> <input type="number" id="phone" name="phone" placeholder="01600000000"> <br>
+    <label for="fax"><b>Phone</b></label> <input type="text" id="fax" name="fax" placeholder=""> <br>
+    <label for="email"><b>Email</b></label><font style="color:red;">*</font> <input type="text" id="email" name="email" placeholder="cmxmunna@gmail.com"> 
     </div> 
-    <div style="text-align: center; margin-left: -280px;">
-    <label for="amount">Donation Amount</label><font style="color:red;">*</font> 
+    <div style="text-align: left; margin-left: 40px;">
+    <label for="amount"><b>Donation Amount</b></label><font style="color:red;">*</font> 
     <input type="radio" id="amount" name="amount"> 
     <label>None</label> <input type="radio" id="amount" name="0"> 
     <label>$50</label> <input type="radio" id="amount" name="50"> 
@@ -83,19 +83,92 @@
      <font size="2">(check a button or type your amount)</font> <br> 
      
      <div style="text-align: right; max-width: 350px;"> 
-        <label for="amount">Other Amount $</label> <input type="number" id="amount" name="amount" placeholder="$$$"> 
+        <label for="amount"><b>Other Amount $</b></label> <input type="number" id="amount" name="amount"> 
      </div>
-     <div style="text-align: center; margin-left: -335px;">
-        <label>Reecurring Donation</label><font style="color:red;">*</font> <input type="checkbox" id="check" name="Reecurring" > I am interested to giving on a regular basis. <br>
+     <div style="text-align: left; margin-left: 25px;">
+        <label><b>Reecurring Donation</b></label><font style="color:red;">*</font> <input type="checkbox" id="check" name="Reecurring" > I am interested to giving on a regular basis. <br>
      </div>
      <font size="2">(check if yes)</font>   <br>
-     <label for="amount">Monthly Credit Card $</label> <input type="text"> <label>For</label> <input type="text"> <label>Months</label> <br>
+     <label for="amount">Monthly Credit Card $</label> <input type="text" size="2"> <label>For</label> <input type="text" size="2"> <label>Months</label> <br>
      <div style="text-align: left; margin-left: -70px;">
         <h3><font style="color: red;">Honorarium and Memorial Donation Information</font></h3>
+     </div>
+     <div style="text-align: left; margin-left: 0px; margin-top: -20px;">
+        <label><b>I would like to make this</b></label> <input type="radio" id="check" name="honor" > To Honor<br>
+     </div>
+     <div style="text-align: left; margin-left: 108px;">
+        <label><b>donation</b></label> <input type="radio" id="check" name="memory" > In Memory of <br>
+     </div>
+     <div style="text-align: right; max-width: 360px;">
+     <label for="name"><b>Name</b></label> <input type="text" id="name" name="name"> <br>
+     <label for="donation"><b>Acknowledge Donation to</b></label> <input type="text" id="doantion" name="donation"> <br>
+     <label for="address"><b>Address</b></label> <input type="text" id="address" name="address"> <br>
+     <label for="city"><b>City</b></label> <input type="text" id="city" name="city"> <br>
+     <label for="state"><b>State</b></label> <input list="states" id="state" name="state" placeholder="Select a State"> <br>
+     <label for="zip"><b>Zip Code</b></label> <input type="number" id="zip" name="zip">
+     </div>
+     
+     <div style="text-align: left; margin-left: -70px;">
+        <h3><font style="color: red;">Additional Information</font></h3>
+     </div>
+     <div style="margin-left: -70px; margin-top: -20px;">
+    <font size="2">Please enter your name, company or organization as you would like to appear in our publications:</font>
     </div>
-     
-        
-     
+    <div style="text-align: right; max-width: 360px;">
+        <label for="name"><b>Name</b></label> <input type="text" id="name" name="name">
+    </div>
+    <div style="margin-left: -70px;">
+        <input type="checkbox" id="check"> <font size="2">I would like my gift to remain anonymous.</font>
+    </div>
+    <div style="margin-left: -70px;">
+        <input type="checkbox" id="check"> <font size="2">My employer offers a matching gift program. I will mail the the matching gift from.</font>
+    </div>
+    <div style="margin-left: -70px;">
+        <input type="checkbox" id="check"> <font size="2">Please save the cost of acknowledge this gift by not mailing a thank you latter.</font>
+    </div> <br>
+    <section>
+        <div style="margin-left: 95px; margin-bottom: -20px;">
+            <label for="comment"><b>Comments</b></label> 
+        </div>
+        <div style="margin-left: 180px;">
+            <textarea style="resize:none;" rows="4" cols="30" name="comment" form="usrform" ></textarea>
+        </div>
+    </section> 
+    <div style="text-align: left; margin-left: -2px;">
+        <label><b>How many we contact you?</b></label> <input type="checkbox" id="check" > E-mail
+    </div> 
+    <div style="text-align: left; margin-left: 190px;">
+        <input type="checkbox" id="check" > Postral Mail
+    </div>
+    <div style="text-align: left; margin-left: 190px;">
+        <input type="checkbox" id="check" > Telephone
+    </div>
+    <div style="text-align: left; margin-left: 190px;">
+        <input type="checkbox" id="check" > Fax 
+    </div>
+    <div style="margin-left: -70px;">
+        <font size="2" style="color: rgb(175, 167, 167);">I would like to recive newsletter and Information about special event by:</font>
+    </div>
+    <div style="text-align: left; margin-left: 190px;">
+        <input type="checkbox" id="check" > E-mail
+    </div>
+    <div style="text-align: left; margin-left: 190px;">
+        <input type="checkbox" id="check" > Postral Mail 
+    </div> 
+    <div style="margin-left: -70px;">
+        <input type="checkbox" id="check"> <font size="2">I would like Information abount voluntering with the organization</font>
+    </div>     
+    <br>
+    <div style="margin-left: 150px;">
+        <button>Reset</button> <button>Continue</button>
+    </div> 
+    <br>
+    <div style="text-align: left; margin-left: -70px;">
+       @ Donate online with confidance. You are on secure server.
+    </div>
+     <div style="text-align: left; margin-left: -70px;">
+     If you have any problem or question, please contact <a href="https://www.facebook.com/cmxmunna/">support</a>
+     </div>
     </div>
 </form>
 </body>
