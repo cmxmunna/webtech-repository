@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="donation.css">
     <title>Donation</title>
 </head>
 <body>
@@ -11,8 +12,8 @@
     <b> &gt; 1 Donation </b> &nbsp;&nbsp; &gt; 2 Confirmation &nbsp;&nbsp; &gt; Thank You 
     <font style="color: red;"><h3>Donor Information</h3></font>
     <form>
-        <div style="text-align: laft; width: 85%; max-width: 850px; margin: auto; margin-top: -20px; margin-right: auto; margin-bottom: auto; margin-left: 60px; position: absolute; left: 0; right: 0; padding: 20px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; ">
-    <div style="text-align: right; max-width: 350px;">
+        <div class="main_form">
+    <div class="name">
     <label for="fname"><b>First Name</b></label><font style="color:red;">*</font> <input type="text" id="fname" name="fname" placeholder="Munna"> <br>
     <label for="lname"><b>Last Name</b></label><font style="color:red;">*</font> <input type="text" id="lname" name="lname" placeholder="Abdullah"> <br>
     <label for="company"><b>Company</b></label> <input type="text" id="company" name="company" placeholder="Star Tech Network Ltd."> <br>
@@ -70,7 +71,7 @@
     <label for="fax"><b>Phone</b></label> <input type="text" id="fax" name="fax" placeholder=""> <br>
     <label for="email"><b>Email</b></label><font style="color:red;">*</font> <input type="text" id="email" name="email" placeholder="cmxmunna@gmail.com"> 
     </div> 
-    <div style="text-align: left; margin-left: 40px;">
+    <div class="radio1">
     <label for="amount"><b>Donation Amount</b></label><font style="color:red;">*</font> 
     <input type="radio" id="amount" name="amount"> 
     <label>None</label> <input type="radio" id="amount" name="0"> 
@@ -82,24 +83,24 @@
      </div>
      <font size="2">(check a button or type your amount)</font> <br> 
      
-     <div style="text-align: right; max-width: 350px;"> 
+     <div class="other_amount"> 
         <label for="amount"><b>Other Amount $</b></label> <input type="number" id="amount" name="amount"> 
      </div>
-     <div style="text-align: left; margin-left: 25px;">
+     <div class="reecurring">
         <label><b>Reecurring Donation</b></label><font style="color:red;">*</font> <input type="checkbox" id="check" name="Reecurring" > I am interested to giving on a regular basis. <br>
      </div>
      <font size="2">(check if yes)</font>   <br>
      <label for="amount">Monthly Credit Card $</label> <input type="text" size="2"> <label>For</label> <input type="text" size="2"> <label>Months</label> <br>
-     <div style="text-align: left; margin-left: -70px;">
+     <div class="heading">
         <h3><font style="color: red;">Honorarium and Memorial Donation Information</font></h3>
      </div>
-     <div style="text-align: left; margin-left: 0px; margin-top: -20px;">
+     <div class="radio2">
         <label><b>I would like to make this</b></label> <input type="radio" id="check" name="honor" > To Honor<br>
      </div>
-     <div style="text-align: left; margin-left: 108px;">
+     <div class="radio3">
         <label><b>donation</b></label> <input type="radio" id="check" name="memory" > In Memory of <br>
      </div>
-     <div style="text-align: right; max-width: 360px;">
+     <div class="donation2">
      <label for="name"><b>Name</b></label> <input type="text" id="name" name="name"> <br>
      <label for="donation"><b>Acknowledge Donation to</b></label> <input type="text" id="doantion" name="donation"> <br>
      <label for="address"><b>Address</b></label> <input type="text" id="address" name="address"> <br>
@@ -108,26 +109,24 @@
      <label for="zip"><b>Zip Code</b></label> <input type="number" id="zip" name="zip">
      </div>
      
-     <div style="text-align: left; margin-left: -70px;">
+     <div class="heading">
         <h3><font style="color: red;">Additional Information</font></h3>
      </div>
-     <div style="margin-left: -70px; margin-top: -20px;">
+     <div class="info1">
     <font size="2">Please enter your name, company or organization as you would like to appear in our publications:</font>
     </div>
-    <div style="text-align: right; max-width: 360px;">
+    <div class="donation2">
         <label for="name"><b>Name</b></label> <input type="text" id="name" name="name">
     </div>
     <div style="margin-left: -70px;">
-        <input type="checkbox" id="check"> <font size="2">I would like my gift to remain anonymous.</font>
-    </div>
-    <div style="margin-left: -70px;">
-        <input type="checkbox" id="check"> <font size="2">My employer offers a matching gift program. I will mail the the matching gift from.</font>
-    </div>
-    <div style="margin-left: -70px;">
-        <input type="checkbox" id="check"> <font size="2">Please save the cost of acknowledge this gift by not mailing a thank you latter.</font>
+        <input type="checkbox" id="check"> <font size="2">I would like my gift to remain anonymous.</font> <br>
+
+        <input type="checkbox" id="check"> <font size="2">My employer offers a matching gift program. I will mail the the matching gift from.</font> <br>
+    
+        <input type="checkbox" id="check"> <font size="2">Please save the cost of acknowledge this gift by not mailing a thank you latter.</font> 
     </div> <br>
     <section>
-        <div style="margin-left: 95px; margin-bottom: -20px;">
+        <div class="comment">
             <label for="comment"><b>Comments</b></label> 
         </div>
         <div style="margin-left: 180px;">
@@ -135,7 +134,7 @@
         </div>
     </section> 
     <div style="text-align: left; margin-left: -2px;">
-        <label><b>How many we contact you?</b></label> <input type="checkbox" id="check" > E-mail
+        <label><b>How may we contact you?</b></label> <input type="checkbox" id="check" > E-mail
     </div> 
     <div style="text-align: left; margin-left: 190px;">
         <input type="checkbox" id="check" > Postral Mail

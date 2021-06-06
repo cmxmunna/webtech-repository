@@ -1,0 +1,67 @@
+.main_form
+{
+    text-align: laft; 
+    width: 85%; 
+    max-width: 850px; 
+    margin: auto; 
+    margin-top: -20px; 
+    margin-right: auto; 
+    margin-bottom: auto; 
+    margin-left: 60px; 
+    position: absolute; 
+    left: 0; right: 0; padding: 20px; padding-top: 20px; 
+    padding-right: 20px; 
+    padding-bottom: 20px; 
+    padding-left: 20px;
+}
+
+.name
+{
+    text-align: right; 
+    max-width: 350px;
+}
+.radio1
+{
+    text-align: left; 
+    margin-left: 40px;
+}
+.radio2
+{
+    text-align: left; 
+    margin-left: 0px; 
+    margin-top: -20px;
+}
+.radio3
+{
+    text-align: left; 
+    margin-left: 108px;
+}
+.other_amount
+{
+    text-align: right; 
+    max-width: 350px;
+}
+.reecurring
+{
+    text-align: left; 
+    margin-left: 25px;
+}
+.donation2
+{
+    text-align: right; max-width: 360px;
+}
+.heading
+{
+    text-align: left; 
+    margin-left: -70px;
+}
+.info1
+{
+    margin-left: -70px; 
+    margin-top: -20px;
+}
+.comment
+{
+    margin-left: 95px; 
+    margin-bottom: -20px;
+}
