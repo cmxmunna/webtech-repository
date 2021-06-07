@@ -1,0 +1,68 @@
+/*Jon Snow Movie character*/
+body
+{
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.heading
+{
+    position: sticky;
+    color: red;
+    text-align: center;
+    padding: 20px;
+    top: 0;
+    font-family: Decaying;
+    font-size: 50px;
+    background-image: url(img/dragonfire.gif);
+    background-size: cover;
+    border-radius: 2px;
+    text-shadow: 2px 2px 4px #000000;
+    box-shadow: 10px 10px 20px #000000;
+}
+section
+{
+    width: 100%;
+}
+.row {
+    display: flex;
+  }
+.column {
+    flex: 50%;
+    padding: 5px;
+  }
+.half
+{
+    float: left;
+    margin-left: 20px;
+}
+.half2
+{
+    float: left;
+    margin-left: 300px;
+    padding-top: 20%;
+    color: white;
+    font-size: 20px;
+}
+.half3
+{
+    float: left;
+    margin-left: 20px;
+    padding-top: 5%;
+    color: white;
+    font-size: 20px;
+}
+.half4
+{
+    float: left;
+    margin-left: 120px;
+}
+@font-face
+{
+    font-family: Decaying;
+    src: url(font/Decaying.ttf);
+}
+.font_aqilah
+{
+    font-family: Aqilah;
+}
