@@ -1,5 +1,5 @@
 # webtech-repository
-This GitHub repo contains about Wabtec course Project.
+This GitHub repo contains about Wabtech course Project.
 
 For web server view please visit https://munnaabdullah.me/
 
