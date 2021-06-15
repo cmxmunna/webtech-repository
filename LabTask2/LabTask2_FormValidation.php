@@ -8,7 +8,7 @@
     <style>
     .error {color: #FF0000;}
     .font {font-family: 'Courier New', Courier, monospace; color: white;}
-    .area {width: 20%;}
+    .area {width: 280px;}
     .blood-cell {width: 50%;}
     body {background-color: #0E1113;}
     </style>
@@ -22,7 +22,7 @@
         if(empty($_POST["name"])) {
             $nameErr = "You must have to filup the Name Box!";
         }
-        if(str_word_count($_POST["name"]) >2) {
+        if(str_word_count($_POST["name"]) <2) {
             $nameErr = "At least two words required!";
         }
         else{
@@ -68,9 +68,9 @@
             $degree = $_POST["degree"];
             }
         }
-        else
-        $degreeErr = "Please Select at least two degrees!";
-        
+        else{
+            $degreeErr = "Please Select at least two degrees!";
+        }
 
         if(empty($_POST["blood"])) {
             $bloodErr = "Please select your blood group!";
