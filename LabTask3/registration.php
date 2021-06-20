@@ -172,7 +172,7 @@
         .font {font-family: 'Courier New', Courier, monospace; color: white;}
         .area {width: 370px;}
         .dob-cell {width: 50%;}
-        body {background-color: #0E1113;}
+        body {background-color: #202020;}
         </style>
     </head>
     <body class="font">
