@@ -1,83 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Registration</title>
-        <style>
-        .error {color: #FF0000;}
-        .font {font-family: 'Courier New', Courier, monospace; color: white;}
-        .area {width: 370px;}
-        .dob-cell {width: 50%;}
-        body {background-color: #0E1113;}
-        </style>
-    </head>
-    <body class="font">
-        <?php
-            $nameErr = $emailErr = $userErr = $passErr = $cpassErr = $genderErr = $dobErr ="";
-            $name = $email = $user = $pass = $cpass = $gender = $dob ="";
-            $message = '';  
+<?php
+    $nameErr = $emailErr = $userErr = $passErr = $cpassErr = $genderErr = $dobErr ="";
+    $name = $email = $user = $pass = $cpass = $gender = $dob ="";
+    $message = '';  
 
-
-            if(isset($_POST["submit"]))  
-            {  
-                if(empty($_POST["name"]))  
-                {  
-                    $nameErr = "Enter Name";  
-                }
-                else if(!preg_match("/^[a-zA-Z-'. ]*$/",$name)) 
-                {
+    if(isset($_POST["submit"]))  
+    {  
+        if(empty($_POST["name"]))  
+        {  
+            $nameErr = "Enter Name";  
+        }
+        else if(!preg_match("/^[a-zA-Z-'. ]*$/",$name)) 
+        {
                     $nameErr = "Only letter and spcae alowed!";
-                }
+        }
                 else if(empty($_POST["email"]))  
-                {  
+        {  
                     $emailErr = "Enter an e-mail";  
-                }
+        }
                 else if(empty($_POST["user"]))  
-                {  
+        {  
                     $userErr = "Enter a username";  
-                }  
-                else if(empty($_POST["pass"]))  
-                {  
+        }  
+        else if(empty($_POST["pass"]))  
+        {  
                     $passErr = "Enter a password";  
-                }
-                else if(empty($_POST["cpass"]))  
-                {  
-                    $cpassErr = "Confirm password field cannot be empty";  
-                } 
-                else if(empty($_POST["gender"]))  
-                {  
-                    $genderErr = "Gender cannot be empty";  
-                } 
+        }
+        else if(empty($_POST["cpass"]))  
+        {  
+            $cpassErr = "Confirm password field cannot be empty";  
+        } 
+        else if(empty($_POST["gender"]))  
+        {  
+            $genderErr = "Gender cannot be empty";  
+        } 
                 
-                else  
+        else  
+        {  
+           if(file_exists('data.json'))  
+            {  
+                $current_data = file_get_contents('data.json');  
+                $array_data = json_decode($current_data, true);  
+                $extra = array(  
+                    'name'               =>     $_POST['name'],  
+                    'e-mail'           =>     $_POST["email"],  
+                    'username'       =>     $_POST["user"],
+                    'password'     =>     $_POST["pass"],  
+                    'gender'     =>     $_POST["gender"],  
+                    'dob'      =>     $_POST["dob"]  
+                );  
+                $array_data[] = $extra;  
+                $final_data = json_encode($array_data);  
+                if(file_put_contents('data.json', $final_data))  
                 {  
-                    if(file_exists('data.json'))  
-                    {  
-                        $current_data = file_get_contents('data.json');  
-                        $array_data = json_decode($current_data, true);  
-                        $extra = array(  
-                            'name'               =>     $_POST['name'],  
-                            'e-mail'          =>     $_POST["email"],  
-                            'username'     =>     $_POST["user"],
-                            'password'     =>     $_POST["pass"],  
-                            'gender'     =>     $_POST["gender"],  
-                            'dob'     =>     $_POST["dob"]  
-                        );  
-                        $array_data[] = $extra;  
-                        $final_data = json_encode($array_data);  
-                        if(file_put_contents('data.json', $final_data))  
-                        {  
-                            $message = "File Appended Success fully";  
-                        }  
-                    }  
-                    else  
-                    {  
-                        $error = 'JSON File not exits';  
-                    }  
+                $message = "File Appended Success fully";  
                 }  
             }  
+            else  
+            {  
+                $error = 'JSON File not exits';  
+            }  
+        }  
+    }  
 
 
 
@@ -176,7 +159,23 @@
             //         $message = 'JSON File not exits';  
             //     }  
             // }  
-        ?>
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration</title>
+        <style>
+        .error {color: #FF0000;}
+        .font {font-family: 'Courier New', Courier, monospace; color: white;}
+        .area {width: 370px;}
+        .dob-cell {width: 50%;}
+        body {background-color: #0E1113;}
+        </style>
+    </head>
+    <body class="font">
         <form method="post" class="area">
              <fieldset>
                 <legend>REGISTRATION</legend>
