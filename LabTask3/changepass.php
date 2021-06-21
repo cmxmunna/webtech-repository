@@ -12,18 +12,26 @@
         } 
         else if($currPass == $currPass)
         {
-           
+           echo "Current Password Mached";
         }
         else
         {
             $currPassErr = "Current password isn't maching!";
         }
 
+        // if(empty($_POST["newPass"]))  
+        // {  
+        //     $newPassErr = "New Password Required!";  
+        // } 
+        if($_POST["currPass"] != $_POST["newPass"]) 
+        {
+            $newPassErr = "New Password cannot be the same as current Password!";
+        }
 
-        if(empty($_POST["newPass"]))  
-        {  
-            $newPassErr = "New Password Required!";  
-        } 
+        if(empty($newPass) || !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix",$newPass))
+        {
+            $newPassErr ="Password must contain Alphabets,Numbers,Special Charecter!";
+        }
       
         if(empty($_POST["cnewPass"])) 
         {
@@ -45,40 +53,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Change Password</title>
     <style>
         .error {color: #FF0000;}
         .font {font-family: 'Courier New', Courier, monospace; color: white;}
-        .area {width: 420px;}
-        .dob-cell {width: 50%;}
         body {background-color: #202020;}
     </style>
 </head>
 <body class="font">
-        <form method="post" class="area">
+        <form method="post" action="">
             <fieldset>
                 <legend><strong>CHANGE PASSWORD</strong></legend>
-                    <div>
-                        <label for="currPass">Current Password:</label>
-                        <input type="text" id="currPass" name="currPass" placeholder="abc@1234" value="">
-                        <span class="error"> <?php echo "<br>".$currPassErr; ?></span>
-                        </div>
-                    <div style="margin-top: 4px; ">
-                        <label for="newPass">New Password:&nbsp;</label>
-                        <input type="text" id="newPass" name="newPass" placeholder="Type New Password" value="<?php echo $newPass; ?>">
-                        <span class="error"> <?php echo "<br>".$newPassErr; ?></span>
-                    </div>
-                    <div style="margin-top: 4px">
-                        <label for="cnewPass"> Retype New Password:</label>
-                        <input type="text" id="cnewPass" name="cnewPass" placeholder="Retype New Password" value="<?php echo $cnewPass; ?>">
-                        <span class="error"> <?php echo "<br>".$cnewPassErr; ?></span>
-                    </div> 
-                <?php  
-                    if(isset($message))  
-                    {
-                        echo "<br>" .$message;
-                    } 
-                ?> 
+                <table>
+                    <tr>
+                        <td><label for="currPass">Current Password</label></td>
+                        <td>:<input type="text" id="currPass" name="currPass" placeholder="abc@1234" value="">
+                        <span class="error"> <?php echo $currPassErr; ?></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="newPass">New Password</label></td>
+                        <td>:<input type="text" id="newPass" name="newPass" placeholder="Type New Password" value="<?php echo $newPass; ?>">
+                        <span class="error"> <?php echo $newPassErr; ?></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cnewPass"> Retype New Password</label></td>
+                        <td>:<input type="text" id="cnewPass" name="cnewPass" placeholder="Retype New Password" value="<?php echo $cnewPass; ?>">
+                        <span class="error"> <?php echo $cnewPassErr; ?></span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <?php  
+                                if(isset($message))  
+                                {
+                                echo "<br>" .$message;
+                                } 
+                            ?>
+                        </td>
+                    </tr>
+                </table> 
                 <br>
                 <input type="submit" name="submit" value="Submit" style="font-size: 15px;">
             </fieldset>

@@ -1,21 +1,22 @@
 <?php
     $userErr = $passErr ="";
     $user = $pass ="";
-    $message = '';  
+    $message = "";  
 
     if(isset($_POST["submit"]))  
     {  
         if(empty($_POST["user"]))  
         {  
-            $userErr = "Enter User Name!";  
+            $userErr = "User Name Required!";  
         }
-        else if(empty($_POST["pass"]))  
+        
+        if(empty($_POST["pass"]))  
         {  
-            $passErr = "Enter your password";  
+            $passErr = "Password Required!";  
         }       
         else  
         {  
-            $message = "<strong>Congratulations! Login Success...</strong>";
+            $message = "<strong>Congratulations! Login Success</strong>";
         }  
     }  
 ?>
@@ -29,40 +30,42 @@
     <style>
         .error {color: #FF0000;}
         .font {font-family: 'Courier New', Courier, monospace; color: white;}
-        .area {width: 370px;}
-        .dob-cell {width: 50%;}
         body {background-color: #202020;}
     </style>
 </head>
 <body class="font">
-        <form method="post" class="area">
+        <form method="post" action="">
             <fieldset>
                 <legend><strong>LOGIN</strong></legend>
-                    <div>
-                        <label for="user">User Name:</label>
-                        <input type="text" id="user" name="user" placeholder="Type User Name" value="<?php echo $user; ?>">
-                        <span class="error">* <?php echo $userErr; ?></span>
-                        </div>
-                    <div style="margin-top: 4px">
-                        <label for="pass">Password:&nbsp;</label>
-                        <input type="text" id="pass" name="pass" placeholder="Type Password" value="<?php echo $pass; ?>">
-                        <span class="error">* <?php echo $passErr; ?></span>
-                    </div> 
-                
-                <br>
-                <input type="checkbox" name="remember" value="remember">Remember Me
-                <?php  
-                    if(isset($message))  
-                    {
-                        echo "<br>" .$message;
+                <table>
+                    <tr>
+                        <td><label for="user">User Name</label></td>
+                        <td>:<input type="text" id="user" name="user" placeholder="Type User Name" value="<?php echo $user; ?>">
+                        <span class="error">* <?php echo $userErr; ?></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass">Password</label></td>
+                        <td>:<input type="text" id="pass" name="pass" placeholder="Type Password" value="<?php echo $pass; ?>">
+                        <span class="error">* <?php echo $passErr; ?></span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="checkbox" name="remember" value="remember">Remember Me</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <?php  
+                                if(isset($message))  
+                                {
+                                    echo "<br>" .$message;
 
-                    } 
-                ?> 
-                <br> <br>
+                                } 
+                            ?>
+                        </td>
+                    </tr>
+                </table>
+                <br>
                 <input type="submit" name="submit" value="Submit" style="font-size: 15px;">
                 <a href="#">Forgot Password?</a>
-                 
-            
             </fieldset>
         </form>      
     </body>
