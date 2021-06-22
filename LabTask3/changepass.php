@@ -19,18 +19,22 @@
             $currPassErr = "Current password isn't maching!";
         }
 
-        // if(empty($_POST["newPass"]))  
-        // {  
-        //     $newPassErr = "New Password Required!";  
-        // } 
         if($_POST["currPass"] != $_POST["newPass"]) 
         {
             $newPassErr = "New Password cannot be the same as current Password!";
         }
 
-        if(empty($newPass) || !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix",$newPass))
+        if(empty($_POST["newPass"]))
         {
-            $newPassErr ="Password must contain Alphabets,Numbers,Special Charecter!";
+            $newPassErr ="New Password Required!";
+        }
+        else
+        {
+            $newPass= $_POST['newPass'];
+            if(!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix",$newPass))
+            {
+                $newPassErr ="Password must contain Alphabets,Numbers,Special Charecter!";
+            }
         }
       
         if(empty($_POST["cnewPass"])) 
@@ -76,9 +80,12 @@
                         <span class="error"> <?php echo $newPassErr; ?></span></td>
                     </tr>
                     <tr>
-                        <td><label for="cnewPass"> Retype New Password</label></td>
+                        <td><label for="cnewPass"> Retype New Password &nbsp;&nbsp;&nbsp;</label></td>
                         <td>:<input type="text" id="cnewPass" name="cnewPass" placeholder="Retype New Password" value="<?php echo $cnewPass; ?>">
                         <span class="error"> <?php echo $cnewPassErr; ?></span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="submit" value="Submit" style="font-size: 15px;"></td>
                     </tr>
                     <tr>
                         <td colspan="2">
@@ -90,9 +97,7 @@
                             ?>
                         </td>
                     </tr>
-                </table> 
-                <br>
-                <input type="submit" name="submit" value="Submit" style="font-size: 15px;">
+                </table>
             </fieldset>
         </form>      
     </body>

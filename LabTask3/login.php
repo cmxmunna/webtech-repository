@@ -37,19 +37,25 @@
         <form method="post" action="">
             <fieldset>
                 <legend><strong>LOGIN</strong></legend>
-                <table>
+                <table align="center">
                     <tr>
-                        <td><label for="user">User Name</label></td>
-                        <td>:<input type="text" id="user" name="user" placeholder="Type User Name" value="<?php echo $user; ?>">
+                        <td><label for="user">User Name &nbsp;&nbsp;&nbsp;</label></td>
+                        <td>:<input type="text" id="user" name="user" placeholder="Type User Name">
                         <span class="error">* <?php echo $userErr; ?></span></td>
                     </tr>
                     <tr>
                         <td><label for="pass">Password</label></td>
-                        <td>:<input type="text" id="pass" name="pass" placeholder="Type Password" value="<?php echo $pass; ?>">
+                        <td>:<input type="password" id="pass" name="pass" placeholder="Type Password">
                         <span class="error">* <?php echo $passErr; ?></span></td>
                     </tr>
                     <tr>
                         <td colspan="2"><input type="checkbox" name="remember" value="remember">Remember Me</td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" name="submit" value="Submit" style="font-size: 15px;"> <a href="#">Forgot Password?</a></td>
                     </tr>
                     <tr>
                         <td colspan="2">
@@ -63,9 +69,6 @@
                         </td>
                     </tr>
                 </table>
-                <br>
-                <input type="submit" name="submit" value="Submit" style="font-size: 15px;">
-                <a href="#">Forgot Password?</a>
             </fieldset>
         </form>      
     </body>
