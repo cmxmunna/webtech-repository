@@ -62,22 +62,14 @@
             $cpassErr = "Confirm Password isn't match!";
         }
 
-        if(empty($_POST["gender"]))  
-        {  
-            $genderErr = "Select you gender(required)!";  
-        } 
-        else if ($_POST["gender"]=="null") 
-        {
-            $genderErr = "Gender is required";
-        } 
-        else 
-        {
-            echo $gender;
-        }
-
         if(empty($_POST["dob"]))  
         {  
             $dobErr = "Pick Your Birthday Date!";  
+        }
+
+        if(!isset($_POST["gender"]))  
+        {  
+            $genderErr = "Select you gender(required)!";  
         } 
         else
         {
@@ -165,7 +157,7 @@
                         <td colspan="2">
                             <fieldset>
                             <legend>Date of Birth</legend>
-                            <input type="date" date_format="dd/mm/yyy" id="dob" name="dob" min="1953-01-01" max="1998-12-31 value="<?php echo $dob; ?>">
+                            <input type="date" date_format="dd/mm/yyy" id="dob" name="dob" min="1953-01-01" max="1998-12-31">
                             <span class="error">* <?php echo $dobErr; ?></span>
                             </fieldset> <br>
                         </td>
