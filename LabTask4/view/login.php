@@ -1,4 +1,4 @@
-<?php include "../control/loginCntrl.php"?>
+<?php include "../control/loginCntrl.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,17 +38,17 @@
                     </tr>
                     <tr>
                         <td><label for="pass">Password</label></td>
-                        <td>:<input type="password" id="pass" name="pass" placeholder="Type Password">
+                        <td>:<input type="text" id="pass" name="pass" placeholder="Type Password">
                         <span class="error">* <?php echo $passErr; ?></span></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input type="checkbox" name="remember" value="remember">Remember Me</td>
+                        <td colspan="2"><input type="checkbox" name="remember">Remember Me</td>
                     </tr>
                     <tr>
                         <td><br></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input type="submit" name="submit" value="Login" style="font-size: 15px;"> <a href="../view/forgot_password.php">Forgot Password?</a></td>
+                        <td colspan="2"><input type="submit" name="login" value="Login" style="font-size: 15px;"> <a href="../view/forgot_password.php">Forgot Password?</a></td>
                     </tr>
                     <tr>
                         <td colspan="2">

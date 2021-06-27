@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Shihab Munna",
+        "e-mail": "cmxmunna@gmail.com",
+        "username": "cmxmunna",
+        "password": "Munna@@123",
+        "gender": "Male",
+        "dob": "1998-06-03"
+    },
+    {
+        "name": "Farhan Nayeem Zitu",
+        "e-mail": "farhan@gmail.com",
+        "username": "farhan",
+        "password": "Farhan@123",
+        "gender": "Male",
+        "dob": "1998-12-23"
+    },
+    {
+        "name": "Mihir Islam",
+        "e-mail": "mihir@gmail.com",
+        "username": "mihir",
+        "password": "Mihir@123",
+        "gender": "Male",
+        "dob": "1998-12-22"
+    }
+]

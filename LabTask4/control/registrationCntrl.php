@@ -59,7 +59,7 @@
         } 
         else if($_POST["pass"] !== $_POST["cpass"]) 
         {
-            $cpassErr = "Confirm Password isn't match!";
+            $cpassErr = "Confirm Password isn't matching!";
         }
 
         if(empty($_POST["dob"]))  
@@ -69,32 +69,37 @@
 
         if(!isset($_POST["gender"]))  
         {  
-            $genderErr = "Select you gender(required)!";  
+            $genderErr = "Select your gender(required)!";  
         } 
         else
         {
             if(file_exists('../resources/files/data.json'))  
             {  
-                $current_data = file_get_contents('../resources/files/data.json');  
-                $array_data = json_decode($current_data, true);  
-                $extra = array(  
-                    'name'               =>     $_POST['name'],  
-                    'e-mail'           =>     $_POST["email"],  
-                    'username'       =>     $_POST["user"],
-                    'password'     =>     $_POST["pass"],  
-                    'gender'     =>     $_POST["gender"],  
-                    'dob'      =>     $_POST["dob"]  
-                );  
-                $array_data[] = $extra;  
-                $final_data = json_encode($array_data);  
-                if(file_put_contents('../resources/files/data.json', $final_data))  
-                {  
-                    $message = "<i>[[File Appended Successfully]]</i>";  
-                }  
+                $formdata = array(
+                'name'               =>     $_POST['name'],  
+                'e-mail'           =>     $_POST["email"],  
+                'username'       =>     $_POST["user"],
+                'password'     =>     $_POST["pass"],  
+                'gender'     =>     $_POST["gender"],  
+                'dob'      =>     $_POST["dob"] 
+                );
+                $current_data = file_get_contents('../resources/files/data.json');
+                $tempJSONdata = json_decode($current_data, true);
+                $tempJSONdata[] = $formdata;
+                $final_data = json_encode($tempJSONdata, JSON_PRETTY_PRINT);
+                
+                if(file_put_contents("../resources/files/data.json", $final_data))
+                {
+                    $message = "<i>Registration Dada Saved Successfully</i>";
+                } 
+                else
+                {
+                    $message = "<i>No Data Saved!, Try Again</i>";
+                }
             }  
             else  
             {  
-                $error = "JSON File not exits";  
+                $message = "JSON File not exits";  
             } 
         }
     } 
