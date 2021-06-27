@@ -73,9 +73,9 @@
         } 
         else
         {
-            if(file_exists('data.json'))  
+            if(file_exists('../resources/files/data.json'))  
             {  
-                $current_data = file_get_contents('data.json');  
+                $current_data = file_get_contents('../resources/files/data.json');  
                 $array_data = json_decode($current_data, true);  
                 $extra = array(  
                     'name'               =>     $_POST['name'],  
@@ -87,7 +87,7 @@
                 );  
                 $array_data[] = $extra;  
                 $final_data = json_encode($array_data);  
-                if(file_put_contents('data.json', $final_data))  
+                if(file_put_contents('../resources/files/data.json', $final_data))  
                 {  
                     $message = "<i>[[File Appended Successfully]]</i>";  
                 }  

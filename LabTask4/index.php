@@ -14,7 +14,7 @@
         .header a {float: left; display: block; color: cyan; text-align: center; padding: 14px 16px; margin-top: 4px; text-decoration: none;}
         .header a.logo img {width: auto; height: auto; margin-top: -20px; margin-left: -20px; margin-bottom: -20px; margin-right: -20px;}
         .header-right {float: right;}
-        .header a:hover {background-color: #4a4a4a; box-shadow: 10px 10px 20px #000000; text-shadow: 2px 2px 4px #000000; color: red;}
+        .header a:hover {background-color: #4a4a4a; border-radius: 4px; box-shadow: 5px 5px 10px #FF0000; text-shadow: 2px 2px 4px #000000; color: red;}
     </style>
 </head>
 <body>
