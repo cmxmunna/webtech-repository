@@ -10,7 +10,7 @@
         {  
             $currPassErr = "Current Pass Required!";  
         } 
-        else if($currPass == $currPass)
+        else if($_POST['currPass'] == $currPass)
         {
            echo "Current Password Mached";
         }
@@ -19,7 +19,7 @@
             $currPassErr = "Current password isn't maching!";
         }
 
-        if($_POST["currPass"] != $_POST["newPass"]) 
+        if($_POST["currPass"] == $_POST["newPass"]) 
         {
             $newPassErr = "New Password cannot be the same as current Password!";
         }
@@ -31,7 +31,7 @@
         else
         {
             $newPass= $_POST['newPass'];
-            if(!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix",$newPass))
+            if(!preg_match('/^[0-9A-Za-z!@#$%]*$/',$newPass))
             {
                 $newPassErr ="Password must contain Alphabets,Numbers,Special Charecter!";
             }
@@ -72,17 +72,17 @@
                     <tr>
                         <td><label for="currPass">Current Password</label></td>
                         <td>:<input type="text" id="currPass" name="currPass" placeholder="abc@1234" value="">
-                        <span class="error"> <?php echo $currPassErr; ?></span></td>
+                        <span class="error">* <?php echo $currPassErr; ?></span></td>
                     </tr>
                     <tr>
                         <td><label for="newPass">New Password</label></td>
-                        <td>:<input type="text" id="newPass" name="newPass" placeholder="Type New Password" value="<?php echo $newPass; ?>">
-                        <span class="error"> <?php echo $newPassErr; ?></span></td>
+                        <td>:<input type="text" id="newPass" name="newPass" placeholder="Type New Password" >
+                        <span class="error">* <?php echo $newPassErr; ?></span></td>
                     </tr>
                     <tr>
                         <td><label for="cnewPass"> Retype New Password &nbsp;&nbsp;&nbsp;</label></td>
-                        <td>:<input type="text" id="cnewPass" name="cnewPass" placeholder="Retype New Password" value="<?php echo $cnewPass; ?>">
-                        <span class="error"> <?php echo $cnewPassErr; ?></span></td>
+                        <td>:<input type="text" id="cnewPass" name="cnewPass" placeholder="Retype New Password" >
+                        <span class="error">* <?php echo $cnewPassErr; ?></span></td>
                     </tr>
                     <tr>
                         <td><input type="submit" name="submit" value="Submit" style="font-size: 15px;"></td>
