@@ -58,21 +58,19 @@
                     }
                 } 
             }
-            
         }
-        
     } 
-    // if(!empty($_POST["remember"])) 
-    // {
-    //     setcookie ("username",$_POST["user"],time()+ 10);
-    //     setcookie ("password",$_POST["pass"],time()+ 10);
-    //     echo $_COOKIE['username'];
-    // } 
-    // else 
-    // {
-    //     setcookie("username","");
-    //     setcookie("password","");
-    // }
+    if(!empty($_POST["remember"])) 
+    {
+        setcookie ("username",$_POST["user"],time()+ 60*60);
+        setcookie ("password",$_POST["pass"],time()+ 60*60);
+        echo $_COOKIE['username'];
+    } 
+    else 
+    {
+        setcookie("username","");
+        setcookie("password","");
+    }
 
     
 ?>

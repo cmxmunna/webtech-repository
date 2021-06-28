@@ -30,5 +30,13 @@
         "password": "Zafrin@123",
         "gender": "Female",
         "dob": "1998-09-07"
+    },
+    {
+        "name": "Farhan Naeem Zitu",
+        "e-mail": "farhannaeemzitu@gmail.com",
+        "username": "zitu",
+        "password": "Zitu@@123",
+        "gender": "Male",
+        "dob": "1998-08-15"
     }
 ]

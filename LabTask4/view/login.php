@@ -33,12 +33,12 @@
                 <table align="center">
                     <tr>
                         <td><label for="user">User Name &nbsp;&nbsp;&nbsp;</label></td>
-                        <td>:<input type="text" id="user" name="user" placeholder="Type User Name">
+                        <td>:<input type="text" id="user" name="user" placeholder="Type User Name" value="<?php if(isset($_COOKIE["username"])) { echo $_COOKIE["username"]; } ?>">
                         <span class="error">* <?php echo $userErr; ?></span></td>
                     </tr>
                     <tr>
                         <td><label for="pass">Password</label></td>
-                        <td>:<input type="text" id="pass" name="pass" placeholder="Type Password">
+                        <td>:<input type="text" id="pass" name="pass" placeholder="Type Password" value="<?php if(isset($_COOKIE["password"])) { echo $_COOKIE["password"]; } ?>">
                         <span class="error">* <?php echo $passErr; ?></span></td>
                     </tr>
                     <tr>
