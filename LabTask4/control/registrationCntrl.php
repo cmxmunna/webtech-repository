@@ -7,7 +7,7 @@
     {  
         if(empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["user"]) || empty($_POST["pass"]) || empty($_POST["cpass"]) || empty($_POST["dob"]) || !isset($_POST["gender"]))
         {
-            $message = "Fill up all filed first!";
+            $message = "Fill up all field first!";
             if(empty($_POST["name"]))  
             {  
                 $nameErr = "Name is required!";  
@@ -34,7 +34,7 @@
                 $email= $_POST['email'];
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
                 {
-                    $emailErr = "Invalid email format";
+                    $emailErr = "Your Email is Invalid!!";
                 }
             }
             

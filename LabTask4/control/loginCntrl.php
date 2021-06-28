@@ -62,8 +62,8 @@
     } 
     if(!empty($_POST["remember"])) 
     {
-        setcookie ("username",$_POST["user"],time()+ 60*60);
-        setcookie ("password",$_POST["pass"],time()+ 60*60);
+        setcookie ("username",$_POST["user"],time()+ (86400*30));
+        setcookie ("password",$_POST["pass"],time()+ (86400*30));
         echo $_COOKIE['username'];
     } 
     else 
