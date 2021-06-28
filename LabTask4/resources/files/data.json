@@ -22,5 +22,13 @@
         "password": "Mihir@123",
         "gender": "Male",
         "dob": "1998-12-22"
+    },
+    {
+        "name": "Zafrin Tabassum",
+        "e-mail": "tabassum123@gmail.com",
+        "username": "zafrin",
+        "password": "Zafrin@123",
+        "gender": "Female",
+        "dob": "1998-09-07"
     }
 ]

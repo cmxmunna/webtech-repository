@@ -27,7 +27,7 @@
             <a href="../view/registration.php">Registration</a>
         </div>
     </div>
-    <form method="post" action="">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <fieldset style="margin-top: 20px;">
             <legend><strong>LOGIN</strong></legend>
                 <table align="center">

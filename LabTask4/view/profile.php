@@ -13,7 +13,9 @@
         .header {overflow: hidden; background-color: #333;}
         .header a {float: left; display: block; color: cyan; text-align: center; padding: 14px 16px; margin-top: 4px; text-decoration: none;}
         .header a.logo img {width: auto; height: auto; margin-top: -20px; margin-left: -20px; margin-bottom: -20px; margin-right: -20px;}
+        a {text-decoration: none; color: cyan;}
         .header-right {float: right;}
+        .header-log-identity {margin-right: 20px; margin-top: 16px; float: left; font-size: 20px;}
         .header a:hover {background-color: #4a4a4a; border-radius: 4px; box-shadow: 5px 5px 10px #FF0000; text-shadow: 2px 2px 4px #000000; color: red;}
         * { box-sizing: border-box;}
         section{ width: 85%; float: right; height: 500px; padding: 20px;}
@@ -26,9 +28,17 @@
 <body>
     <div class="header">
         <a href="https://startechnetwork.xyz/LabTask4/index.php" class="logo"><img src="https://startechnetwork.xyz/LabTask4/resources/img/logo/ife-logo.gif" alt="IFE"></a>
-        <div class="header-right">
-            Logged in as <a href="../view/profile.php">Jhon</a>
-            <a href="../view/login.php">Logout</a>
+            <div class="header-right">
+            <span class="header-log-identity">Logged in as </span> 
+            <a href="../view/profile.php">
+                <?php
+                    if(isset($User))
+                    {
+                        echo $User;
+                    }
+                ?>
+            </a>
+            <a href="../control/logout.php">Logout</a>
         </div>
     </div>
     <div class="main">
@@ -39,12 +49,70 @@
             <a href="../view/edit_profile.php">Edit Profile</a> <br>
             <a href="../view/profile_picture.php">Change Profile Picture</a> <br>
             <a href="../view/change_password.php">Change Password</a> <br>
-            <a href="../view/login.php">Logout</a>
+            <a href="../control/logout.php">Logout</a>
         </aside>
         <section>
-            
-            
-
+            <fieldset>
+                <legend>PROFILE</legend>
+                <table align="center">
+                    <tr>
+                        <td><label for="name">Name</label></td>
+                        <td>:<b><label>
+                            <?php
+                                if(isset($Name))
+                                {
+                                    echo $Name;
+                                }
+                            ?>
+                        </label></b>
+                        </td>
+                        <td rowspan="4" >
+                            <img  src="https://masged.net/wp-content/themes/cera-child/assets/images/avatars/user-avatar.png" alt="sampleImage" height="160px" style="margin-left: 10px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td>:<b><label>
+                            <?php
+                                if(isset($Email))
+                                {
+                                    echo $Email;
+                                }
+                            ?>
+                        </label></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">Gender</label></td>
+                        <td>:<b><label>
+                            <?php
+                                if(isset($Gender))
+                                {
+                                    echo $Gender;
+                                }
+                            ?>
+                        </label></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="dob">Date of Birth</label></td>
+                        <td>:<b><label>
+                            <?php
+                                if(isset($DOB))
+                                {
+                                    echo $DOB;
+                                }
+                            ?>
+                        </label></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="../view/edit_profile.php">Edit Profile</a></td>
+                        <td></td>
+                        <td align="center"><a href="../view/profile_picture.php">Change</a></td>
+                    </tr>
+                </table>
+            </fieldset>
         </section>
     </div>
     <div class="footer"><p>Copyright © 2021 || All Rights Reserved.</p></div>

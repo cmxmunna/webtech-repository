@@ -34,6 +34,9 @@
         {
             $data = file_get_contents("../resources/files/data.json");
             $data = json_decode($data, true);  
+
+            session_start();
+            
             if (isset($_POST['login'])) 
             {               
                 foreach($data as $row)

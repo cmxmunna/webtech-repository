@@ -5,72 +5,76 @@
 
     if($_SERVER["REQUEST_METHOD"] == "POST")  
     {  
-        if(empty($_POST["name"]))  
-        {  
-            $nameErr = "Name is required!";  
-        }
-        else if(str_word_count($_POST["name"]) <2)
+        if(empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["user"]) || empty($_POST["pass"]) || empty($_POST["cpass"]) || empty($_POST["dob"]) || !isset($_POST["gender"]))
         {
-            $nameErr = "Name can not contain less then two wards!";
-        }
-        else
-        {   
-            $name = $_POST['name'];
-            if(!preg_match("/^[a-zA-Z ]*$/",$name))
-            {
-                $nameErr = "Only letter and spcae alowed!";
+            $message = "Fill up all filed first!";
+            if(empty($_POST["name"]))  
+            {  
+                $nameErr = "Name is required!";  
             }
-        }
-
-        if (empty($_POST["email"])) 
-        {
-            $emailErr = "Email is required";
-        } 
-        else 
-        {   
-            $email= $_POST['email'];
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+            else if(str_word_count($_POST["name"]) <2)
             {
-                $emailErr = "Invalid email format";
+                $nameErr = "Name can not contain less then two wards!";
             }
-        }
-        
-        if(empty($_POST["user"]))  
-        {  
-            $userErr = "Username is required!";
-        }
-         
-        if(empty($_POST["pass"]))  
-        {  
-            $passErr = "Password is required!";  
-        }
-        else 
-        {
-            $pass = $_POST['pass'];
-            if(!preg_match('/^[0-9A-Za-z!@#$%]*$/',$pass) || strlen($pass) <8)
+            else
+            {   
+                $name = $_POST['name'];
+                if(!preg_match("/^[a-zA-Z ]*$/",$name))
+                {
+                    $nameErr = "Only letter and spcae alowed!";
+                }
+            }
+
+            if (empty($_POST["email"])) 
             {
-                $passErr = "Password must contain Alphabets,Numbers,Special Charecter!";
+                $emailErr = "Email is required";
+            } 
+            else 
+            {   
+                $email= $_POST['email'];
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+                {
+                    $emailErr = "Invalid email format";
+                }
             }
-        }
-        
-        if(empty($_POST["cpass"]))  
-        {  
-            $cpassErr = "Confirm password is required!";  
-        } 
-        else if($_POST["pass"] !== $_POST["cpass"]) 
-        {
-            $cpassErr = "Confirm Password isn't matching!";
-        }
+            
+            if(empty($_POST["user"]))  
+            {  
+                $userErr = "Username is required!";
+            }
+            
+            if(empty($_POST["pass"]))  
+            {  
+                $passErr = "Password is required!";  
+            }
+            else 
+            {
+                $pass = $_POST['pass'];
+                if(!preg_match('/^[0-9A-Za-z!@#$%]*$/',$pass) || strlen($pass) <8)
+                {
+                    $passErr = "Password must contain Alphabets,Numbers,Special Charecter!";
+                }
+            }
+            
+            if(empty($_POST["cpass"]))  
+            {  
+                $cpassErr = "Confirm password is required!";  
+            } 
+            else if($_POST["pass"] !== $_POST["cpass"]) 
+            {
+                $cpassErr = "Confirm Password isn't matching!";
+            }
 
-        if(empty($_POST["dob"]))  
-        {  
-            $dobErr = "Pick Your Birthday Date!";  
-        }
+            if(empty($_POST["dob"]))  
+            {  
+                $dobErr = "Pick Your Birthday Date!";  
+            }
 
-        if(!isset($_POST["gender"]))  
-        {  
-            $genderErr = "Select your gender(required)!";  
-        } 
+            if(!isset($_POST["gender"]))  
+            {  
+                $genderErr = "Select your gender(required)!";  
+            } 
+        }
         else
         {
             if(file_exists('../resources/files/data.json'))  

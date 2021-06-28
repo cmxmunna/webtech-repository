@@ -26,12 +26,12 @@
             <a href="../view/registration.php">Registration</a>
         </div>
     </div>
-    <form action="" method="post">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <fieldset style="margin-top: 20px;">
             <legend>REGISTRATION</legend>
                 <table align="center">
                     <tr>
-                        <td>Name</td>
+                        <td><label for="name">Name</label></td>
                         <td>:<input type="text" id="name" name="name" >
                         <span class="error">* <?php echo $nameErr; ?></span></td>
                     </tr>
@@ -42,7 +42,7 @@
                     </tr>
                     <tr>
                         <td><label for="user">User Name</label></td>
-                        <td>:<input type="text" id="user" name="user" >
+                        <td>:<input type="text" id="user" name="user">
                         <span class="error">* <?php echo $userErr; ?></span></td>
                     </tr>
                     <tr>
