@@ -30,5 +30,21 @@
         "password": "Zitu@@123",
         "gender": "Male",
         "dob": "1998-08-15"
+    },
+    {
+        "name": "Meshaktur Rahman",
+        "e-mail": "meshkatur@gmail.com",
+        "username": "meshkatur",
+        "password": "Meshkatur@123",
+        "gender": "Male",
+        "dob": "1998-12-16"
+    },
+    {
+        "name": "Anannya Rahman",
+        "e-mail": "anannya@gmail.com",
+        "username": "anannya",
+        "password": "Anannya@123",
+        "gender": "Female",
+        "dob": "1998-12-14"
     }
 ]
