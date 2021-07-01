@@ -7,14 +7,14 @@ For github web server view please visit https://munnaabdullah.me/
 ## Institutional Inentity
 ```bash
 ==============================================================
-----------------------
-|   MUNNA, SHIHAB    |
-|   ID: 18-36025-1   |
-----------------------
-|   COURSE FACULTY   |
-|RASHIDUL HASAN NABIL|
-|    LECTURER, CS    |
-----------------------
-American International University Bangladesh
+                   ----------------------
+                   |   MUNNA, SHIHAB    |
+                   |   ID: 18-36025-1   |
+                   ----------------------
+                   |   COURSE FACULTY   |
+                   |RASHIDUL HASAN NABIL|
+                   |    LECTURER, CS    |
+                   ----------------------
+        American International University Bangladesh
 ==============================================================
 ```
