@@ -1,0 +1,1 @@
+<div class="copyright"><p>Copyright © 2021 || All Rights Reserved by <a href="../aboutus/spacex_soft_tech.php"> SpaceX Soft Tech</a></p></div>
