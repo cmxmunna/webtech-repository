@@ -1,0 +1,105 @@
+[
+    {
+        "name": "Farhan Naeem Zitu",
+        "e-mail": "farhan@gmail.com",
+        "username": "farhan",
+        "password": "Farhan@123",
+        "gender": "Male",
+        "dob": "1998-12-23"
+    },
+    {
+        "name": "Mihir Islam",
+        "e-mail": "mihir@gmail.com",
+        "username": "mihir",
+        "password": "Mihir@123",
+        "gender": "Male",
+        "dob": "1998-12-22"
+    },
+    {
+        "name": "Zafrin Tabassum",
+        "e-mail": "tabassum123@gmail.com",
+        "username": "zafrin",
+        "password": "Zafrin@123",
+        "gender": "Female",
+        "dob": "1998-09-07"
+    },
+    {
+        "name": "SHIHAB MUNNA",
+        "e-mail": "cmxmunna@gmail.com",
+        "username": "cmxmunna",
+        "password": "Munna@123",
+        "gender": "Male",
+        "dob": "1998-12-07"
+    },
+    {
+        "name": "SADIA HOSSAIN SHARON",
+        "e-mail": "shrubof@gmail.com",
+        "username": "Sharon",
+        "password": "Sharon@123",
+        "gender": "Female",
+        "dob": "1998-10-07"
+    },
+    {
+        "name": "SADIA HOSSAIN SHARON",
+        "e-mail": "shrubof@gmail.com",
+        "username": "Sharon",
+        "password": "Sharon@123",
+        "gender": "Female",
+        "dob": "1998-10-07"
+    },
+    {
+        "name": "SHIHAB MUNNA",
+        "e-mail": "cmxmunna@gmail.com",
+        "username": "Munna",
+        "password": "Munna@123",
+        "phone": "01627124780",
+        "address": "Golan, Ulokhola, Kaliganj, Gazipur",
+        "user-type": "Student",
+        "gender": "Male",
+        "dob": "1998-12-04"
+    },
+    {
+        "name": "SHIHAB MUNNA",
+        "e-mail": "cmxmunna@gmail.com",
+        "username": "cmxmunna",
+        "password": "Munna@123",
+        "phone": "01627124780",
+        "address": "Golan, Ulokhola, Kaliganj, Gazipur",
+        "user-type": "Corporate",
+        "gender": "Male",
+        "dob": "1998-12-08"
+    },
+    {
+        "name": "SHIHAB MUNNA",
+        "e-mail": "cmxmunna@gmail.com",
+        "username": "cmxmunna",
+        "password": "asdasdasd",
+        "phone": "01627124780",
+        "address": "Golan, Ulokhola, Kaliganj, Gazipur",
+        "user-type": "Student",
+        "gender": "Male",
+        "dob": "1998-11-30"
+    },
+    {
+        "name": "SHIHAB MUNNA",
+        "e-mail": "cmxmunna@gmail.com",
+        "username": "Munna",
+        "password": "Munna@123",
+        "phone": "01627124780",
+        "address": "Golan, Ulokhola, Kaliganj, Gazipur",
+        "user-type": "Corporate",
+        "gender": "Male",
+        "dob": "1998-12-08"
+    },
+    {
+        "name": "asdasda",
+        "e-mail": "asdasdasd@sdfsd.cxv",
+        "username": "asedasdasd",
+        "password": "asdasdasd",
+        "phone": "234234234",
+        "address": "sadfsdfsdf",
+        "user-type": "Corporate",
+        "gender": "Male",
+        "dob": "1998-12-07"
+    }
+]
