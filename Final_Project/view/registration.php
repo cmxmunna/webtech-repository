@@ -1,4 +1,4 @@
-<?php include "../control/registrationCntrl.php"; ?>
+<?php include "../controller/registrationCntrl.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,6 +65,7 @@
                                 <option value="">Select</option>
                                 <option value="Home">Home Internet</option>
                                 <option value="Corporate">Corporate Internet</option>
+                                <option value="Wireless">Wireless Internet</i></option>
                                 <option value="Student">Student Internet</option>
                                 <option value="IPTelephony">IP Telephony</option>
                                 <option value="Host&Develope">Hosting & Developement</option>
@@ -118,6 +119,5 @@
         </form> 
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <?php include('../header_footer/copyright.php'); ?>
-    <script src="../resources/js/ife.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>

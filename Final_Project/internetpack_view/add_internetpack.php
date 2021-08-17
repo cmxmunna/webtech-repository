@@ -17,11 +17,17 @@
     <div class="main">
     <?php include('../controller/panelCntrl.php'); ?>
         <section>
-        <input type="button" onclick="goBack()" class="link-hvr" value="← Back">
+        <a href="../internetpack_view/view_all_internetpacks.php"><span class="btn-action error">← Back</span></a>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return ipackAddValidation()" method="post" enctype="multipart/form-data">
                 <div class="better-view m-l-20">
                     <h1 class="color-cyan">ADD NEW INERNET PACK</h1>
                     <table>
+                        <tr>
+                            <td colspan="2" class="forgot green"><?php if(isset($message)){echo $message;} ?></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="error"><?php if(isset($error)){echo $error;} ?></td>
+                        </tr>
                         <tr>
                             <td><label for="name">Pack Name</label></td>
                             <td>: <input type="text" id="name" name="name" >
@@ -38,6 +44,7 @@
                             <td>
                                 <input type="radio" id="Home" name="usertype" value="Home"><label for="Home" class="green"> Home Internet</label> <br>
                                 <input type="radio" id="Corporate" name="usertype" value="Corporate"><label for="Corporate" class="green"> Corporate Internet</label><br>
+                                <input type="radio" id="Wireless" name="usertype" value="Wireless"><label for="Wireless" class="green"> Wireless Internet</label><br>
                                 <input type="radio" id="Student" name="usertype" value="Student"><label for="Student" class="green"> Student Internet</label><br>
                                 <input type="radio" id="IPTelephony" name="usertype" value="IPTelephony"><label for="IPTelephony" class="green"> IP Telephony</label><br>
                                 <input type="radio" id="Host&Develope" name="usertype" value="Host&Develope"><label for="Host&Develope" class="green"> Hosting & Developement</label>
@@ -50,7 +57,7 @@
                             <td>
                                 <input type="radio" id="FiberOptics" name="conntype" value="Fiber Optics"><label for="FiberOptics" class="red"> Fiber Optics</label><br>
                                 <input type="radio" id="Cat6Cable" name="conntype" value="Cat6 Cable"><label for="Cat6Cable" class="green"> CAT6 Cable</label><br>
-                                <input type="radio" id="Wireless" name="conntype" value="Wireless"><label for="Wireless" class="yellow"> Wireless</label><br>
+                                <input type="radio" id="Wireless2" name="conntype" value="Wireless"><label for="Wireless2" class="yellow"> Wireless</label><br>
                                 <input type="radio" id="connTypeOther" name="conntype" value="Other"><label for="connTypeOther" class="color-cyan"> Other</label>
                                 <br><span id="conntypeErr" class="error">*</span>
                             </td>
@@ -121,26 +128,6 @@
                             </td>
                             <td>
                                 <input type="reset" value="Reset" class="btn">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="forgot green">
-                                <?php  
-                                    if(isset($message))  
-                                    {  
-                                        echo $message;  
-                                    }  
-                                ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="error">
-                                <?php  
-                                    if(isset($error))  
-                                    {  
-                                        echo $error;  
-                                    }  
-                                ?>
                             </td>
                         </tr>
                     </table>

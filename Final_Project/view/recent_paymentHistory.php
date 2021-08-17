@@ -23,10 +23,6 @@
                     <td>: <?php if(isset($_COOKIE["subscriber_name"])) { echo $_COOKIE["subscriber_name"]; } ?></td>
                 </tr>
                 <tr>
-                    <td>Contact</td>
-                    <td>: <?php if(isset($_COOKIE["phone_number"])) { echo $_COOKIE["phone_number"]; } ?></td>
-                </tr>
-                <tr>
                     <td>User Type</td>
                     <td>: <?php if(isset($_COOKIE["usertype"])) { echo $_COOKIE["usertype"]; } ?></td>
                 </tr>
@@ -45,6 +41,10 @@
                 <tr>
                     <td>Payment Method</td>
                     <td>: <?php if(isset($_COOKIE["payment_method"])) { echo $_COOKIE["payment_method"]; } ?></td>
+                </tr>
+                <tr>
+                    <td>Payment Number</td>
+                    <td>: <?php if(isset($_COOKIE["phone_number"])) { echo $_COOKIE["phone_number"]; } ?></td>
                 </tr>
                 <tr>
                     <td>Transection ID</td>

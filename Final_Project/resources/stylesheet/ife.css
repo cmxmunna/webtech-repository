@@ -1,39 +1,71 @@
 /* Responsive Media CSS */
-@media only screen and (max-width: 768px){
-    body { 
-        font-size: 10px;
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.col-1{
+    width: 25%;
+    padding: 0 15px;
+}
+.col-2{
+    width: 50%;
+    padding: 0 15px;
+}
+.col-3{
+    width: 100%;
+    padding: 0 15px;
+}
+.col-2 ul li:first-child{
+    margin-top: 100px;
+}
+
+@media(max-width: 768px){
+    .col-1{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .col-2 img{
+        width: 350px;
     }
 }
-.row::after {
-    content: "";
-    clear: both;
-    display: block;
+@media(max-width: 574px){
+    .heading{
+        font-size: 6px;
+    }
+    .col-1 h3{
+        font-size: 18px;
+    }
+    .col-1 img{
+        width: 150px;
+    }
+    .col-3 h1{
+        font-size: 20px;
+        width: 100%;
+    }
+    .col-3 p{
+        font-size: 13px;
+        width: 100%;
+    }
+    .subdropmenu{
+        display: none;
+        position: absolute;
+        width: 40px;
+    }
+    .col-1{
+        width: 100%;
+    }
+    .col-2{
+        width: 100%;
+    }
+    .col-2 ul li:first-child{
+        margin-top: 10px;
+        width: 100%;
+    }
+    .col-2 img{
+        width: 200px;
+    }
 }
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-}
-/* For desktop: */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
-  }
-}
-
+/* Responsive Media CSS */
 
 /* Body Tag Start*/
 *{
@@ -104,6 +136,18 @@ section{
 }
 .yellow{
     color: yellow;
+}
+.bg-1{
+    background-color: darkcyan;
+}
+.bg-2{
+    background-color:darkslateblue;
+}
+.bg-3{
+    background-color: rgb(3, 30, 148);
+}
+.bg-4{
+    background-color:deepskyblue;
 }
 .better-view{
     margin-top: 3%;
@@ -599,8 +643,6 @@ ul{
 .btn-action {
     text-transform: uppercase;
     background: #24262B; 
-    width: 15px;
-    height: 10px;
     border: 0;
     padding-left: 15px;
     padding-right: 15px;

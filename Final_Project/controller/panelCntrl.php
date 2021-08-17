@@ -19,6 +19,10 @@
     {
         include('../panel/userpanel.php');
     }
+    else if($Type=="Wireless")
+    {
+        include('../panel/userpanel.php');
+    }
     else if($Type=="Student")
     {
         include('../panel/userpanel.php');

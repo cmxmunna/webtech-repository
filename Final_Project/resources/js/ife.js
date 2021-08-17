@@ -16,11 +16,11 @@ function peymentGetwayErrRemove()
     }
 }
 
-// Login Validation 
+// Create Payment Validation 
 function createPaymentValidation() 
 {
     var phone_number = document.getElementById("phone_number").value;
-    var privacyPolicy = document.getElementById("privacyPolicy").value;
+    var policyCkeck = document.getElementById("privacyPolicy");
 
     if (phone_number == "") 
     {
@@ -31,7 +31,7 @@ function createPaymentValidation()
     else{
         document.getElementById("phone_numberErr").innerHTML = "";
     }
-    if (privacyPolicy == "") 
+    if (policyCkeck.checked == false) 
     {
         document.getElementById("privacyPolicyErr").innerHTML =
         " ⚠ Please check our Privacy Policy!";
@@ -97,7 +97,7 @@ function LoginValidation()
     }
 }
 
-//User Registration Validation by JS
+//User Registration Validation by Farhan Naeem
 function RegistrationValidation() 
 {
     var name = document.getElementById("name").value;
@@ -248,19 +248,21 @@ function RegistrationValidation()
     }
 }
 
-//Product add cvalidation by javascript
+//Product add validation by javascript by Munna, Shihab
 function ipackAddValidation() 
 {
     var name = document.getElementById("name").value;
     var speed = document.getElementById("speed").value;
     var userTypeHome = document.getElementById("Home");
     var userTypeCorporate = document.getElementById("Corporate");
+    var userTypeWireless = document.getElementById("Wireless");
+    var userTypeWireless = document.getElementById("Wireless");
     var userTypeStudent = document.getElementById("Student");
     var userTypeIPTelephony = document.getElementById("IPTelephony");
     var userTypeHost_Develope = document.getElementById("Host&Develope");
     var connTypeFiberOptics = document.getElementById("FiberOptics");
     var connTypeCat6Cable = document.getElementById("Cat6Cable");
-    var connTypeWireless = document.getElementById("Wireless");
+    var connTypeWireless = document.getElementById("Wireless2");
     var connTypeOther = document.getElementById("connTypeOther");
     var anyTime = document.getElementById("any");
     var dayTime = document.getElementById("day");
@@ -293,7 +295,7 @@ function ipackAddValidation()
         document.getElementById("speedErr").innerHTML = "";
     }
     if (userTypeHome.checked == false && userTypeCorporate.checked == false && 
-        userTypeStudent.checked == false && userTypeIPTelephony.checked == false && 
+        userTypeWireless.checked == false && userTypeStudent.checked == false && userTypeIPTelephony.checked == false && 
         userTypeHost_Develope.checked == false) 
     {
         document.getElementById("usertypeErr").innerHTML =
@@ -370,30 +372,3 @@ function ipackAddValidation()
     }
 }
 
-function createPayment() 
-{
-    var phone = document.getElementById("phonenumber").value;
-    
-    // var genderM = document.getElementById("Male");
-    // var genderF = document.getElementById("Female");
-    // var genderO = document.getElementById("Other");
-
-    if (phone == "") 
-    {
-        document.getElementById("phoneErr").innerHTML =
-        " ⚠ Please fill the username field";
-        return false;
-    }
-    else{
-        document.getElementById("phoneErr").innerHTML = "";
-    }
-    // if (genderM.checked == false && genderF.checked == false && genderO.checked == false ) 
-    // {
-    //     document.getElementById("genderErr").innerHTML =
-    //     " ⚠ Please select your gender";
-    //     return false;
-    // }
-    // else{
-    //     document.getElementById("genderErr").innerHTML = "";
-    // }
-}

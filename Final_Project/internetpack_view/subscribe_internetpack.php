@@ -1,7 +1,7 @@
 <?php 
     include '../controller/session.php';
     require_once '../internetpack_controller/ipackinfoCntrl.php'; 
-    $ipacks = fetchallipacks();
+    $ipacks = fetchShowableIpacks();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +19,7 @@
     <?php include('../controller/panelCntrl.php'); ?>
         <section>
             <h1 class="color-cyan">ALL INTERNET PACKAGE LIST</h1>
+
             <table border="1" class="usr-table">
                 <thead>
                     <tr>

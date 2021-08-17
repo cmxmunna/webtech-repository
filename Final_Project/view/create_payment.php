@@ -20,7 +20,7 @@
         <section>
             <h1 class="color-cyan">CONFIRM PAYMENT</h1>
             <span class="green"><?php if(isset($message))echo $message?></span>
-            <span class="red"><?php if(isset($error))echo $error?></span>
+            <span class="red"><?php if(isset($error))echo $error?></span><br>
             <span class="red"><?php if($Type !== $ipack['usertype'])echo "Warning: User Type ".$ipack['usertype']." Required!" ?></span><br>
             <span class="red"><?php if(isset($typeRequired))echo $typeRequired?></span>
         <form action="" onsubmit="return createPaymentValidation()" method="post">
@@ -87,7 +87,7 @@
                             <td colspan="3"><label id="paymentGetwayBoxlLoad"></label></td>
                         </tr>
                         <tr>
-                            <td colspan="2"><label id="privacyPolicyLoad"></label></td>
+                            <td colspan="3"><label id="privacyPolicyLoad"></label></td>
                         </tr>
                         <tr>
                             <td><input type="submit" name="confirm" value="confirm" class="btn1"></td>

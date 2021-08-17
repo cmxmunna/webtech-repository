@@ -14,7 +14,7 @@
         {
             $payment_methodErr = " ⚠ Please select a Payment Method";
         }
-        if($Type !== $_POST['usertype'])
+        else if($Type !== $_POST['usertype'])
         {
             $typeRequired = "Your User Type dose not match with this Package Type<br> Contact with <a href='../admin_view/mail.php' class='btn-action'>Admin</a> to change your UserType";
         }
@@ -37,7 +37,7 @@
 
             if (createPayment($data)) 
             {
-                $message = "<i>Congratulations! Transection Success... <a href='../view/payment_history.php?user_id=$user_id' class='link-hvr'>Click to see Transection History</a></i>";
+                $message = "<i>Congratulations! Transection Success... <a href='../view/user_paymentHistory.php?user_id=$user_id' class='link-hvr'>Click to see Transection History</a></i>";
 
                 setcookie ("subscriber_name",$Name,time() + (86400*7));
                 setcookie ("usertype",$_POST['usertype'],time() + (86400*7));

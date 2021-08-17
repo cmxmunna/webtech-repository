@@ -82,66 +82,78 @@
                     <li><a href="http://amrbd.com/" target="_blank">Song 24x7</a></li>
                 </ul>
             </li>
-            <li class="dropmenu"><a href="how_to_do_payment/payment.php"><i class="fa fa-credit-card"></i> Payment Options</a> </li>
+            <li class="dropmenu"><a href="how_to_do_payment/payment.php"><i class="fa fa-credit-card"></i> Payment
+                    Options</a> </li>
             <li class="dropmenu"><a href="#"><i class="fa fa-angle-up"></i> Scroll Up</a></li>
         </ul>
     </div>
-    <div class="welcome">
-        <table>
-            <tr>
-                <td>
-                    <h1>Welcome to IFE</h1> <br>
-                    <p>
-                        The name of our company is "Internet for Everyone". Our motto is <i>'low price means good
-                            internet'</i> <br>
-                        We basically provide internet for everyone including office-court, educational institutions and
-                        homes <br>
-                        Specially those who have less money, Poor people. Those who do not have the ability to access
-                        the internet <br>
-                        from SIM companies at a higher price. We try to provide low cost internet services for them.
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>Create a <span class="reg-marquee">"STUDENT"</span> account by clicking the registration button
-                        now and get your One month internet
-                        subscriptions for free!!! </p>
-                </td>
-            </tr>
-        </table>
+    <br><br>
+    <div class="col-3 center">
+        <h1>Welcome to IFE</h1> <br>
+        <p>
+            The name of our company is "Internet for Everyone". Our motto is <i>'low price means goodinternet'</i>
+            We basically provide internet for everyone including office-court, educational institutions andhomes
+            Specially those who have less money, Poor people. Those who do not have the ability to accessthe internet
+            from SIM companies at a higher price. We try to provide low cost internet services for them.
+        </p>
+        <p>Create a <span class="reg-marquee">"STUDENT"</span> account by clicking the registration button
+            now and get your One month internet
+            subscriptions for free!!! 
+        </p>
     </div>
-    <table>
-        <tr>
-            <td>
-                <img src="resources/img/images/about.png" alt="About Mission Vision" width="800px">
-            </td>
-            <td>
-                <p class="justify">
-                IFE has come a long way since its establishment in 1997. From small beginnings <br> 
-                as a provider of dial-up & radio link Internet access to local businesses, we have<br> 
-                grown consistently and organically as a communications provider serving a <br> 
-                diverse portfolio of business class voice and data services. <br><br>
-                </p>
-                <div class="left">
-                    <ul>
-                        <li><i class="fa fa-caret-right"></i>&nbsp; Corporate Internet & Data Connectivity</li>
-                        <li><i class="fa fa-caret-right"></i>&nbsp; Safe & Smarter Home Internet</li>
-                        <li><i class="fa fa-caret-right"></i>&nbsp; High Quality & Reliable IPTSP Service</li>
-                        <li><i class="fa fa-caret-right"></i>&nbsp; Secured Hosting & Web Development</li>
-                    </ul>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <div class="feature-text">
-        <table>
-            <p>Our Services <br> __________________________________ </p>
-            <tr>
-                
-            </tr>
-        </table>
+    <div class="row">
+        <div class="col-2">
+            <img src="resources/img/images/about.png" alt="About Mission Vision">
+        </div>
+        <div class="col-2">
+            <ul>
+                <li><i class="fa fa-caret-right"></i>&nbsp; Corporate Internet & Data Connectivity</li>
+                <li><i class="fa fa-caret-right"></i>&nbsp; Safe & Smarter Home Internet</li>
+                <li><i class="fa fa-caret-right"></i>&nbsp; High Quality & Reliable IPTSP Service</li>
+                <li><i class="fa fa-caret-right"></i>&nbsp; Secured Hosting & Web Development</li>
+            </ul>
+        </div>
     </div>
+    <br><br>
+    <div class="col-3 center">
+        <h1 class='color-cyan'>Checkout All Our Internet Packages</h1> <br>
+    </div>
+
+    <?php
+        require_once 'model/ipack_model.php';
+        function fetchShowableIpacks()
+        {
+            return onlyShowableIpacks();
+        }
+        $ipacks = fetchShowableIpacks();
+    ?>
+    <div class="row">
+        <?php foreach ($ipacks as $i => $ipack): ?>
+            <div class="col-1">
+                <table border="1">
+                    <tr>
+                        <th class='center red'><h3><?php echo $ipack['name'] ?></h3></th>
+                    </tr>
+                    <tr>
+                        <td class='center'><img width="200px" src="resources/img/ipack_img/<?php echo $ipack['image'] ?>" alt="<?php echo $ipack['name'] ?>"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Speed: <?php echo $ipack['speed'] ?><br>
+                            Price: <?php echo $ipack['price']." TK" ?><br>
+                            User Type: <?php echo $ipack['usertype'] ?><br>
+                            Connection Type: <?php echo $ipack['conntype'] ?><br>
+                            Using Time: <?php echo $ipack['time'] ?><br>
+                            Support: <?php echo $ipack['support'] ?><br>
+                            Included: <?php echo $ipack['included'] ?><br>
+                            <a href="../view/create_payment.php?pack_id=<?php echo $ipack['pack_id'] ?>" class="green"><span class="btn-action">Subscribe</span></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        <?php endforeach; ?>
+    </div>
+    
     <!-- footer start -->
     <footer class="footer">
         <div class="container">

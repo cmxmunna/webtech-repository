@@ -24,30 +24,34 @@
                 <thead>
                     <tr>
                         <th>Subscriber Name</th>
-                        <th>Contact</th>
                         <th>User Type</th>
                         <th>Internet Pack</th>
                         <th>Subscription Month</th>
                         <th>Amount Paid</th>
                         <th>Payment Method</th>
+                        <th>Payment Number</th>
                         <th>Transection ID</th>
                         <th>Status</th>
                         <th>Transection Time</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($payments as $i => $payment): ?>
                         <tr>
                             <td style="max-width: 130px"><?php echo $payment['subscriber_name'] ?></td>
-                            <td><?php echo $payment['phone_number'] ?></td>
                             <td><?php echo $payment['usertype'] ?></td>
                             <td style="max-width: 150px"><?php echo $payment['subscription_pack_name'] ?></td>
                             <td><?php echo $payment['subscription_month'] ?></td>
                             <td><?php echo $payment['amount'] ?></td>
                             <td><?php echo $payment['payment_method'] ?></td>
+                            <td><?php echo $payment['phone_number'] ?></td>
                             <td><?php echo $payment['transaction_id'] ?></td>
                             <td><?php echo $payment['status'] ?></td>
                             <td><?php echo $payment['transaction_time'] ?></td>
+                            <td>
+                                <a href="../view/cancel_userPayment.php?transaction_id=<?php echo $payment['transaction_id'] ?>"><span class="btn-action error">Update</span></a>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

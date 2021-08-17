@@ -32,6 +32,39 @@
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $rows;
     }
+
+    function showUserPayment($transaction_id)
+    {
+        $conn = db_conn();
+        $selectQuery = "SELECT * FROM `payment` where transaction_id = ?";
+        try {
+            $stmt = $conn->prepare($selectQuery);
+            $stmt->execute([$transaction_id]);
+        } 
+        catch (PDOException $e) 
+        {
+            echo $e->getMessage();
+        }
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $rows;
+    }
+
+    function UpdateUserPayment($transaction_id, $data)
+    {
+        $conn = db_conn();
+        $selectQuery = "UPDATE payment SET status = ? where transaction_id = ?";
+        try
+        {
+            $stmt = $conn->prepare($selectQuery);
+            $stmt->execute([$data['status'], $transaction_id]);
+        }
+        catch(PDOException $e)
+        {
+            echo $e->getMessage();
+        }
+        $conn = null;
+        return true;
+    }
     
     function createPayment($data)
     {

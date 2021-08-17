@@ -10,4 +10,8 @@
     {
         return showUserPaymentHistory($user_id);
     }
+    function fetchUserPayment($transaction_id)
+    {
+        return showUserPayment($transaction_id);
+    }
 ?>

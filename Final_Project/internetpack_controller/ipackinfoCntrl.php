@@ -6,6 +6,10 @@
     {
         return showallipacks();
     }
+    function fetchShowableIpacks()
+    {
+        return onlyShowableIpacks();
+    }
     function fetchipack($pack_id)
     {
         return showipack($pack_id);

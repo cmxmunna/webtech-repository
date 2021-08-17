@@ -24,7 +24,7 @@
     <?php include('../controller/panelCntrl.php'); ?>
         <section>
             <div class="center green"><span><?php if(isset($message)) { echo $message; }?></span></div>
-            <input type="button" onclick="goBack()" class="link-hvr" value="← Back">
+        <a href="../user_view/view_all_users.php"><span class="btn-action error">← Back</span></a>
             <form method="post" action="">
                 <div>
                     <h1><legend>EDIT PROFILE</legend></h1>
@@ -65,6 +65,7 @@
                                 <fieldset>
                                     <input type="radio" id="Home" name="usertype" value="Home" <?php if (isset($user['usertype']) && $user['usertype']=="Home") echo "checked";?>><label for="Home" class="green"> Home Internet</label> <br>
                                     <input type="radio" id="Corporate" name="usertype" value="Corporate" <?php if (isset($user['usertype']) && $user['usertype']=="Corporate") echo "checked";?>><label for="Corporate" class="green"> Corporate Internet</label><br>
+                                    <input type="radio" id="Wireless" name="usertype" value="Wireless" <?php if (isset($user['usertype']) && $user['usertype']=="Wireless") echo "checked";?>><label for="Wireless" class="green"> Wireless Internet</label><br>
                                     <input type="radio" id="Student" name="usertype" value="Student" <?php if (isset($user['usertype']) && $user['usertype']=="Student") echo "checked";?>><label for="Student" class="green"> Student Internet</label><br>
                                     <input type="radio" id="IPTelephony" name="usertype" value="IPTelephony" <?php if (isset($user['usertype']) && $user['usertype']=="IPTelephony") echo "checked";?>><label for="IPTelephony" class="green"> IP Telephony</label><br>
                                     <input type="radio" id="Host&Develope" name="usertype" value="Host&Develope" <?php if (isset($user['usertype']) && $user['usertype']=="Host&Develope") echo "checked";?>><label for="Host&Develope" class="green"> Hosting & Developement</label>

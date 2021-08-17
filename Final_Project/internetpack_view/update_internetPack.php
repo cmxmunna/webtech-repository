@@ -20,7 +20,7 @@
     <?php include('../controller/panelCntrl.php'); ?>
         <section>
             <div class="center green"><span><?php if(isset($message)) { echo $message; }?></span></div>
-            <input type="button" onclick="goBack()" class="link-hvr" value="← Back">
+            <a href="../internetpack_view/view_all_internetpacks.php"><span class="btn-action error">← Back</span></a>
             <form method="post" action="" enctype="multipart/form-data">
                 <div>
                     <h1 class="color-cyan">UPDATE INTERNET PACKAGE</h1>
@@ -39,6 +39,7 @@
                                 <fieldset>
                                     <input type="radio" id="Home" name="usertype" value="Home" <?php if (isset($ipack['usertype']) && $ipack['usertype']=="Home") echo "checked";?>><label for="Home" class="green" /> Home Internet</label> <br>
                                     <input type="radio" id="Corporate" name="usertype" value="Corporate" <?php if (isset($ipack['usertype']) && $ipack['usertype']=="Corporate") echo "checked";?>><label for="Corporate" class="green"> Corporate Internet</label><br>
+                                    <input type="radio" id="Wireless" name="usertype" value="Wireless" <?php if (isset($ipack['usertype']) && $ipack['usertype']=="Wireless") echo "checked";?>><label for="Wireless" class="green"> Wireless Internet</label><br>
                                     <input type="radio" id="Student" name="usertype" value="Student" <?php if (isset($ipack['usertype']) && $ipack['usertype']=="Student") echo "checked";?>><label for="Student" class="green"> Student Internet</label><br>
                                     <input type="radio" id="IPTelephony" name="usertype" value="IPTelephony" <?php if (isset($ipack['usertype']) && $ipack['usertype']=="IPTelephony") echo "checked";?>><label for="IPTelephony" class="green"> IP Telephony</label><br>
                                     <input type="radio" id="Host&Develope" name="usertype" value="Host&Develope" <?php if (isset($ipack['usertype']) && $ipack['usertype']=="Host&Develope") echo "checked";?>><label for="Host&Develope" class="green"> Hosting & Developement</label>
@@ -52,7 +53,7 @@
                                 <fieldset>
                                     <input type="radio" id="Fiber Optics" name="conntype" value="Fiber Optics" <?php if (isset($ipack['conntype']) && $ipack['conntype']=="Fiber Optics") echo "checked";?>><label for="Fiber Optics" class="red"> Fiber Optics</label><br>
                                     <input type="radio" id="Cat6 Cable" name="conntype" value="Cat6 Cable" <?php if (isset($ipack['conntype']) && $ipack['conntype']=="Cat6 Cable") echo "checked";?>><label for="Cat6 Cable" class="green"> CAT6 Cable</label><br>
-                                    <input type="radio" id="Wireless" name="conntype" value="Wireless" <?php if (isset($ipack['conntype']) && $ipack['conntype']=="Wireless") echo "checked";?>><label for="Wireless" class="yellow"> Wireless</label><br>
+                                    <input type="radio" id="Wireless2" name="conntype" value="Wireless" <?php if (isset($ipack['conntype']) && $ipack['conntype']=="Wireless") echo "checked";?>><label for="Wireless2" class="yellow"> Wireless</label><br>
                                     <input type="radio" id="Other" name="conntype" value="Other" <?php if (isset($ipack['conntype']) && $ipack['conntype']=="Other") echo "checked";?>><label for="Other" class="color-cyan"> Other</label>
                                     <br><span id="connTypeErr" class="error">*</span>
                                 </fieldset>

@@ -19,6 +19,22 @@ function showallipacks()
     return $rows;
 }
 
+function onlyShowableIpacks()
+{
+	$conn = db_conn();
+    $selectQuery = "SELECT * FROM `internetpack` where display = 'Yes'";
+    try
+    {
+        $stmt = $conn->query($selectQuery);
+    }
+    catch(PDOException $e)
+    {
+        echo $e->getMessage();
+    }
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $rows;
+}
+
 function showipack($pack_id)
 {
 	$conn = db_conn();
