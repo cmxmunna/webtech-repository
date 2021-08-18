@@ -11,8 +11,7 @@
     </div>
     <div class="admin-area">
         <i class="fas fa-user-shield font-size-20 bottom-mar-10"></i><strong> Administration</strong><br>
-        <a href="#"><i class="fas fa-users-cog"></i> Employee Control</a> <br>
-        <a href="../user_view/view_all_users.php"><i class="fas fa-users"></i> User Control</a>
+        <a href="../mod_view/view_all_mods.php"><i class="fas fa-users-cog"></i> Moderator Control</a> <br>
     </div>
     <div class="ipack-area">
         <i class="fab fa-internet-explorer font-size-20 bottom-mar-10"></i><strong> Internet Package</strong></a> <br>
@@ -22,7 +21,7 @@
     </div>
     <div class="payment-area">
         <i class="fas fa-file-invoice-dollar font-size-20 bottom-mar-10"></i><strong> Track Payment</strong></a> <br>
-        <a href="../payment/user_payment.php"><i class="fas fa-file-invoice-dollar"></i> User Payment</a>
+        <a href="#"><i class="fas fa-file-invoice-dollar"></i> User Payment</a>
     </div>
     <p class="m-l-10 pad-10"><a href="../controller/logout.php"><i class="fas fa-sign-out-alt bottom-mar-50"></i> Logout</a></p>
 </aside>

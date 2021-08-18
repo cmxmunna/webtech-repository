@@ -138,7 +138,7 @@
                         <td class='center'><img width="200px" src="resources/img/ipack_img/<?php echo $ipack['image'] ?>" alt="<?php echo $ipack['name'] ?>"></td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class='center'>
                             Speed: <?php echo $ipack['speed'] ?><br>
                             Price: <?php echo $ipack['price']." TK" ?><br>
                             User Type: <?php echo $ipack['usertype'] ?><br>

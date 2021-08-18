@@ -56,6 +56,7 @@
                     <?php endforeach; ?>
                 </tbody>
             </table>
+            <br><br><br><br><br>
         </section>
     </div>
     <?php include('../header_footer/copyright.php'); ?>

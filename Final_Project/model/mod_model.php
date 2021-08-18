@@ -94,7 +94,7 @@
         return $row;
     }
     
-    function addamod($data)
+    function addmod($data)
     {
         $conn = db_conn();
         $selectQuery = "INSERT into modinfo (user_id, name, email, username, password, phone, address, usertype, gender, dob, image)

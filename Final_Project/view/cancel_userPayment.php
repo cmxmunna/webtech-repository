@@ -28,7 +28,6 @@
     <div class="main">
     <?php include('../controller/panelCntrl.php'); ?>
         <section>
-        <a href="../view/Track_userPayment.php"><span class="btn-action error">← Back</span></a>
             <h1 class="color-cyan">User Transection Update</h1>
             <table border="1" class="usr-table">
                 <thead>

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../resources/stylesheet/footer_info.css?v=<?php echo time(); ?>">  
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
+<br><br><br><br>
   <footer class="footer">
   	 <div class="container">
   	 	<div class="row">
@@ -31,7 +31,7 @@
 					<li><a href="../aboutus/about_us.php">about us</a></li>
   	 				<li><a href="../aboutus/privacy_policy.php">privacy policy</a></li>
   	 				<li><a href="../internetpack/special_offer.php">special offer</a></li>
-					<li><a href="../payment/payment.php">payment options</a></li>
+					<li><a href="../how_to_do_payment/payment.php">payment options</a></li>
 					<li><a href="../aboutus/faq.php">FAQ</a></li>
   	 			</ul>
   	 		</div>
